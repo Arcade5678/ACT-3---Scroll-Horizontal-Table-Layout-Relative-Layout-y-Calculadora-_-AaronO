@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:background="#1A237E"
+    android:padding="24dp">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="ACT3 — Exercicis"
+        android:textSize="28sp"
+        android:textStyle="bold"
+        android:textColor="#FFFFFF"
+        android:layout_marginBottom="8dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Selecciona un exercici"
+        android:textSize="14sp"
+        android:textColor="#9FA8DA"
+        android:layout_marginBottom="48dp"/>
+
+    <Button
+        android:id="@+id/btnExercici11"
+        android:layout_width="280dp"
+        android:layout_height="56dp"
+        android:text="Exercici 11 — Scroll Horitzontal"
+        android:textColor="#FFFFFF"
+        android:backgroundTint="#3949AB"
+        android:layout_marginBottom="16dp"
+        android:textSize="13sp"/>
+
+    <Button
+        android:id="@+id/btnExercici12"
+        android:layout_width="280dp"
+        android:layout_height="56dp"
+        android:text="Exercici 12 — Table / Grid Layout"
+        android:textColor="#FFFFFF"
+        android:backgroundTint="#3949AB"
+        android:layout_marginBottom="16dp"
+        android:textSize="13sp"/>
+
+    <Button
+        android:id="@+id/btnExercici13"
+        android:layout_width="280dp"
+        android:layout_height="56dp"
+        android:text="Exercici 13 — Relative Layout"
+        android:textColor="#FFFFFF"
+        android:backgroundTint="#3949AB"
+        android:layout_marginBottom="16dp"
+        android:textSize="13sp"/>
+
+    <Button
+        android:id="@+id/btnExercici14"
+        android:layout_width="280dp"
+        android:layout_height="56dp"
+        android:text="Exercici 14 — Calculadora"
+        android:textColor="#FFFFFF"
+        android:backgroundTint="#3949AB"
+        android:textSize="13sp"/>
+
+</LinearLayout>

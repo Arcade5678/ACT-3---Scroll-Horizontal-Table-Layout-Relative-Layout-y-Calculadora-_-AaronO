@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.ACT3ScrollHorizontalTableLayoutRelativeLayoutYCalculadora">
+
+        <!-- Menú Principal -->
+        <activity
+            android:name=".MainActivity"
+            android:exported="true"
+            android:label="@string/app_name">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!-- Exercici 11: Scroll Horitzontal -->
+        <activity
+            android:name=".Exercici11Activity"
+            android:exported="false"
+            android:label="@string/exercici_11"/>
+
+        <!-- Exercici 12: TableLayout + GridLayout + LinearLayout -->
+        <activity
+            android:name=".Exercici12Activity"
+            android:exported="false"
+            android:label="@string/exercici_12"/>
+
+        <!-- Exercici 13: RelativeLayout -->
+        <activity
+            android:name=".Exercici13Activity"
+            android:exported="false"
+            android:label="@string/exercici_13"/>
+
+        <!-- Exercici 14: Calculadora -->
+        <activity
+            android:name=".Exercici14Activity"
+            android:exported="false"
+            android:label="@string/exercici_14"/>
+
+    </application>
+
+</manifest>

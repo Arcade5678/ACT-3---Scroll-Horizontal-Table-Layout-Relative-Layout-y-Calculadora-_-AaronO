@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#F5F5F5">
+
+    <!-- Toolbar -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:background="#3949AB"
+        android:gravity="center_vertical"
+        android:paddingStart="16dp">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Exercici 13 — Relative Layout"
+            android:textColor="#FFFFFF"
+            android:textSize="16sp"
+            android:textStyle="bold"/>
+    </LinearLayout>
+
+    <!-- RelativeLayout principal que ocupa la resta de pantalla -->
+    <!--
+        Reproduïm el dibuix:
+        - Blanc (superior esquerra): alignParentTop + alignParentLeft, fins toLeftOf del rosa
+        - Rosa (superior dret): alignParentTop + alignParentRight, toRightOf del blanc
+        - Ciànid/Teal (gran central): below del blanc/rosa, alignParentLeft, toLeftOf del dret. Ocupa l'espai central
+        - Taronja (inferior esquerra): alignParentBottom + alignParentLeft, toLeftOf del rosa-inferior
+        - Rosa inferior (inferior dret): alignParentBottom + alignParentRight
+    -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:padding="12dp">
+
+        <!-- BLANC: cantonada superior esquerra -->
+        <View
+            android:id="@+id/viewBlanc"
+            android:layout_width="100dp"
+            android:layout_height="80dp"
+            android:background="#FFFFFF"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentStart="true"
+            android:elevation="2dp"/>
+
+        <!-- ROSA FOSC (magenta): superior dret, al costat del blanc -->
+        <View
+            android:id="@+id/viewRosaTop"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:background="#E91E8C"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_toEndOf="@id/viewBlanc"/>
+
+        <!-- TEAL (gran central): below del blanc, ocupa tot l'espai missatge, fins al block inferior -->
+        <View
+            android:id="@+id/viewTeal"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:background="#00BFA5"
+            android:layout_below="@id/viewBlanc"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:layout_above="@id/viewTaronja"/>
+
+        <!-- TARONJA: inferior esquerra -->
+        <View
+            android:id="@+id/viewTaronja"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:background="#FF9800"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentStart="true"
+            android:layout_toStartOf="@id/viewRosaBott"/>
+
+        <!-- ROSA FOSC inferior: inferior dret, al costat del Taronja -->
+        <View
+            android:id="@+id/viewRosaBott"
+            android:layout_width="140dp"
+            android:layout_height="100dp"
+            android:background="#E91E8C"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentEnd="true"/>
+
+        <!-- LABELS: text de referència com al dibuix -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="toLeftOf →"
+            android:textColor="#FFFFFF"
+            android:textSize="11sp"
+            android:textStyle="bold"
+            android:layout_alignParentTop="true"
+            android:layout_toEndOf="@id/viewBlanc"
+            android:layout_marginTop="28dp"
+            android:layout_marginStart="8dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="↑ below"
+            android:textColor="#FFFFFF"
+            android:textSize="11sp"
+            android:textStyle="bold"
+            android:layout_below="@id/viewRosaTop"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="8dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="↑ below"
+            android:textColor="#FFFFFF"
+            android:textSize="11sp"
+            android:textStyle="bold"
+            android:layout_above="@id/viewRosaBott"
+            android:layout_toStartOf="@id/viewRosaBott"
+            android:layout_marginBottom="4dp"
+            android:layout_marginEnd="8dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="← alignTop"
+            android:textColor="#FFFFFF"
+            android:textSize="11sp"
+            android:textStyle="bold"
+            android:layout_alignParentBottom="true"
+            android:layout_toStartOf="@id/viewRosaBott"
+            android:layout_marginBottom="52dp"
+            android:layout_marginEnd="4dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="← toRightOf"
+            android:textColor="#FFFFFF"
+            android:textSize="11sp"
+            android:textStyle="bold"
+            android:layout_alignParentBottom="true"
+            android:layout_toStartOf="@id/viewRosaBott"
+            android:layout_marginBottom="30dp"
+            android:layout_marginEnd="4dp"/>
+
+        <!-- Labels de costats (com al dibuix de referència) -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="alignParentTop"
+            android:textColor="#3949AB"
+            android:textSize="10sp"
+            android:textStyle="bold"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="2dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="alignParentBottom"
+            android:textColor="#BF360C"
+            android:textSize="10sp"
+            android:textStyle="bold"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"/>
+
+    </RelativeLayout>
+
+</LinearLayout>
